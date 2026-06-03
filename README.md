@@ -5,6 +5,8 @@ A web-based Input Method Editor (IME) for Geez scripts (Tigrinya, Amharic, etc.)
 - **Mobile**: Designed for touch interaction and virtual keyboard display.
 - **Desktop**: Designed for physical keyboard input using phonetic mapping.
 
+> This project was developed as a **proof of concept** for a web based IME implementation.
+
 ## Projects
 
 ### 1. [Mobile Keyboard](./mobile_ime/)
