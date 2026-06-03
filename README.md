@@ -1,6 +1,6 @@
-# Geez Web IME Suite
+# Geez Web IME
 
-A collection of web-based Input Method Editors (IME) for Geez scripts (Tigrinya, Amharic, etc.). This repository contains two versions of the IME: one designed for mobile/on-screen interaction and another for physical keyboard input on desktop.
+A web-based Input Method Editor (IME) for Geez scripts (Tigrinya, Amharic, etc.). This project contains two versions of the IME: one designed for mobile/on-screen interaction and another for physical keyboard input on desktop.
 
 > **Note**: This project serves as a **proof of concept** for phonetic-to-Geez script conversion and virtual keyboard implementation in web environments.
 
