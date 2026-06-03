@@ -1,0 +1,62 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+}
+
+.main {
+  margin-top: 40px;
+  width: 80%;
+}
+
+.text-area {
+  border: 2px solid #80bdff;
+  border-radius: 5px;
+  padding: 5px;
+  resize: none;
+  color: #495057;
+  width: 100%;
+  height: 400px;
+  font-size: 12px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-area:focus {
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.icon-list {
+  list-style-type: none;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  margin: 5px;
+}
+
+.icon-list li {
+  display: inline-block;
+  color: #ffffff;
+  background-color: var(--gray);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icon-list li:hover, .icon-list .active {
+  background-color: var(--gray-dark);
+}

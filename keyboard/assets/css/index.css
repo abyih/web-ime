@@ -1,0 +1,81 @@
+.main {
+  width: 300px;
+  position: fixed;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  background-color: #292F33;
+  font-family: "Trebuchet MS";
+}
+
+.keyboard {
+  position: absolute;
+  bottom: 0;
+  background-color: #080808;
+  width: 100%;
+  height: 215px;
+  padding: 5px 5px 10px 5px;
+  font-size: 20px;
+  color: #e7e7e7;
+}
+
+.keyboard p {
+  margin: 0;
+}
+
+.keyboard .key {
+  background-color: #383838;
+  width: 25px;
+  height: 30px;
+  border-radius: 10%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.keyboard .body .key {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.keyboard .body .key:nth-child(1) {
+  margin-left: 0px;
+}
+
+.keyboard .special {
+  width: 37px;
+  background-color: #262626;
+}
+
+.keyboard .tig {
+  background-color: #262626;
+}
+
+.keyboard .space-bar {
+  width: 145px;
+  border-radius: 5px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+
+.text-area {
+  margin-left: 15px;
+  margin-top: 10px;
+  border: none;
+  resize: none;
+  background-color: #66757F;
+  width: 90%;
+  height: 180px;
+  font-size: 20px;
+}
