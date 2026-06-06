@@ -15,18 +15,503 @@
       href="assets/fonts/fontawesome-all.min.css"
     />
   </head>
-  <body class="bg-dark">
-    <div class="p-3">
-      <a href="../index.html" class="btn btn-outline-light btn-sm"
-        >← Back to homepage</a
-      >
-    </div>
-    <div id="main" class="main">
-      <div class="keyboard"></div>
+  <body class="bg-light text-dark">
+    <div class="container-fluid py-4">
+      <div class="mb-4">
+        <a href="../index.html" class="btn btn-outline-dark btn-sm"
+          >← Back to homepage</a
+        >
+      </div>
+      
+      <div class="row">
+        <!-- Phone Simulator Column -->
+        <div class="col-lg-5 col-xl-4 d-flex justify-content-center mb-5">
+          <div id="main" class="main border border-secondary rounded shadow-sm">
+            <div class="keyboard"></div>
+          </div>
+        </div>
+
+        <!-- Letter Mapping Guide Column -->
+        <div class="col-lg-7 col-xl-8">
+          <div class="card shadow-sm p-4 mb-4 bg-white text-dark">
+            <h4 class="mb-3 fw-bold">Letter Mapping Guide</h4>
+            <div class="mb-3">
+              <input type="text" id="table-search" class="form-control border-secondary text-dark bg-white" placeholder="Search phonetic mappings or characters (e.g. he, hua, ሀ, ሏ)..." autocomplete="off">
+            </div>
+            
+            <div class="table-responsive" style="max-height: 480px; overflow-y: auto;">
+              <table class="table table-bordered table-striped table-hover table-sm text-center align-middle mb-0">
+                <thead>
+                  <tr class="table-light text-dark">
+                    <th class="py-1">e (ግዕዝ)</th>
+                    <th class="py-1">u (ካልዕ)</th>
+                    <th class="py-1">i (ሳልስ)</th>
+                    <th class="py-1">a (ራብዕ)</th>
+                    <th class="py-1">ie (ሓምስ)</th>
+                    <th class="py-1">ሳድስ</th>
+                    <th class="py-1">o (ሳብዕ)</th>
+                    <th class="py-1">ua</th>
+                    <th class="py-1">ue</th>
+                    <th class="py-1">ui</th>
+                  </tr>
+                </thead>
+                <tbody id="mapping-table-body">
+                  <tr>
+                    <td><b>ሀ</b> <small>(he)</small></td>
+                    <td><b>ሁ</b> <small>(hu)</small></td>
+                    <td><b>ሂ</b> <small>(hi)</small></td>
+                    <td><b>ሃ</b> <small>(ha)</small></td>
+                    <td><b>ሄ</b> <small>(hie)</small></td>
+                    <td><b>ህ</b> <small>(h)</small></td>
+                    <td><b>ሆ</b> <small>(ho)</small></td>
+                    <td><b>ኋ</b> <small>(hua)</small></td>
+                    <td><b>ኈ</b> <small>(hue)</small></td>
+                    <td><b>ኊ</b> <small>(hui)</small></td>
+                  </tr>
+                  <tr>
+                    <td><b>ለ</b> <small>(le)</small></td>
+                    <td><b>ሉ</b> <small>(lu)</small></td>
+                    <td><b>ሊ</b> <small>(li)</small></td>
+                    <td><b>ላ</b> <small>(la)</small></td>
+                    <td><b>ሌ</b> <small>(lie)</small></td>
+                    <td><b>ል</b> <small>(l)</small></td>
+                    <td><b>ሎ</b> <small>(lo)</small></td>
+                    <td><b>ሏ</b> <small>(lua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ሐ</b> <small>(He)</small></td>
+                    <td><b>ሑ</b> <small>(Hu)</small></td>
+                    <td><b>ሒ</b> <small>(Hi)</small></td>
+                    <td><b>ሓ</b> <small>(Ha)</small></td>
+                    <td><b>ሔ</b> <small>(Hie)</small></td>
+                    <td><b>ሕ</b> <small>(H)</small></td>
+                    <td><b>ሖ</b> <small>(Ho)</small></td>
+                    <td><b>ሗ</b> <small>(Hua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>መ</b> <small>(me)</small></td>
+                    <td><b>ሙ</b> <small>(mu)</small></td>
+                    <td><b>ሚ</b> <small>(mi)</small></td>
+                    <td><b>ማ</b> <small>(ma)</small></td>
+                    <td><b>ሜ</b> <small>(mie)</small></td>
+                    <td><b>ም</b> <small>(m)</small></td>
+                    <td><b>ሞ</b> <small>(mo)</small></td>
+                    <td><b>ሟ</b> <small>(mua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ረ</b> <small>(re)</small></td>
+                    <td><b>ሩ</b> <small>(ru)</small></td>
+                    <td><b>ሪ</b> <small>(ri)</small></td>
+                    <td><b>ራ</b> <small>(ra)</small></td>
+                    <td><b>ሬ</b> <small>(rie)</small></td>
+                    <td><b>ር</b> <small>(r)</small></td>
+                    <td><b>ሮ</b> <small>(ro)</small></td>
+                    <td><b>ሯ</b> <small>(rua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ሰ</b> <small>(se)</small></td>
+                    <td><b>ሱ</b> <small>(su)</small></td>
+                    <td><b>ሲ</b> <small>(si)</small></td>
+                    <td><b>ሳ</b> <small>(sa)</small></td>
+                    <td><b>ሴ</b> <small>(sie)</small></td>
+                    <td><b>ስ</b> <small>(s)</small></td>
+                    <td><b>ሶ</b> <small>(so)</small></td>
+                    <td><b>ሷ</b> <small>(sua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ሠ</b> <small>(s2e)</small></td>
+                    <td><b>ሡ</b> <small>(s2u)</small></td>
+                    <td><b>ሢ</b> <small>(s2i)</small></td>
+                    <td><b>ሣ</b> <small>(s2a)</small></td>
+                    <td><b>ሤ</b> <small>(s2ie)</small></td>
+                    <td><b>ሥ</b> <small>(s2)</small></td>
+                    <td><b>ሦ</b> <small>(s2o)</small></td>
+                    <td><b>ሧ</b> <small>(s2ua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ሸ</b> <small>(Se)</small></td>
+                    <td><b>ሹ</b> <small>(Su)</small></td>
+                    <td><b>ሺ</b> <small>(Si)</small></td>
+                    <td><b>ሻ</b> <small>(Sa)</small></td>
+                    <td><b>ሼ</b> <small>(Sie)</small></td>
+                    <td><b>ሽ</b> <small>(S)</small></td>
+                    <td><b>ሾ</b> <small>(So)</small></td>
+                    <td><b>ሿ</b> <small>(Sua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ቀ</b> <small>(qe)</small></td>
+                    <td><b>ቁ</b> <small>(qu)</small></td>
+                    <td><b>ቂ</b> <small>(qi)</small></td>
+                    <td><b>ቃ</b> <small>(qa)</small></td>
+                    <td><b>ቄ</b> <small>(qie)</small></td>
+                    <td><b>ቅ</b> <small>(q)</small></td>
+                    <td><b>ቆ</b> <small>(qo)</small></td>
+                    <td><b>ቋ</b> <small>(qua)</small></td>
+                    <td><b>ቈ</b> <small>(que)</small></td>
+                    <td><b>ቊ</b> <small>(qui)</small></td>
+                  </tr>
+                  <tr>
+                    <td><b>ቐ</b> <small>(Qe)</small></td>
+                    <td><b>ቑ</b> <small>(Qu)</small></td>
+                    <td><b>ቒ</b> <small>(Qi)</small></td>
+                    <td><b>ቓ</b> <small>(Qa)</small></td>
+                    <td><b>ቔ</b> <small>(Qie)</small></td>
+                    <td><b>ቕ</b> <small>(Q)</small></td>
+                    <td><b>ቖ</b> <small>(Qo)</small></td>
+                    <td><b>ቛ</b> <small>(Qua)</small></td>
+                    <td><b>ቘ</b> <small>(Que)</small></td>
+                    <td><b>ቚ</b> <small>(Qui)</small></td>
+                  </tr>
+                  <tr>
+                    <td><b>በ</b> <small>(be)</small></td>
+                    <td><b>ቡ</b> <small>(bu)</small></td>
+                    <td><b>ቢ</b> <small>(bi)</small></td>
+                    <td><b>ባ</b> <small>(ba)</small></td>
+                    <td><b>ቤ</b> <small>(bie)</small></td>
+                    <td><b>ብ</b> <small>(b)</small></td>
+                    <td><b>ቦ</b> <small>(bo)</small></td>
+                    <td><b>ቧ</b> <small>(bua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ተ</b> <small>(te)</small></td>
+                    <td><b>ቱ</b> <small>(tu)</small></td>
+                    <td><b>ቲ</b> <small>(ti)</small></td>
+                    <td><b>ታ</b> <small>(ta)</small></td>
+                    <td><b>ቴ</b> <small>(tie)</small></td>
+                    <td><b>ት</b> <small>(t)</small></td>
+                    <td><b>ቶ</b> <small>(to)</small></td>
+                    <td><b>ቷ</b> <small>(tua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ቸ</b> <small>(ce)</small></td>
+                    <td><b>ቹ</b> <small>(cu)</small></td>
+                    <td><b>ቺ</b> <small>(ci)</small></td>
+                    <td><b>ቻ</b> <small>(ca)</small></td>
+                    <td><b>ቼ</b> <small>(cie)</small></td>
+                    <td><b>ች</b> <small>(c)</small></td>
+                    <td><b>ቾ</b> <small>(co)</small></td>
+                    <td><b>ቿ</b> <small>(cua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ኀ</b> <small>(h2e)</small></td>
+                    <td><b>ኁ</b> <small>(h2u)</small></td>
+                    <td><b>ኂ</b> <small>(h2i)</small></td>
+                    <td><b>ኃ</b> <small>(h2a)</small></td>
+                    <td><b>ኄ</b> <small>(h2ie)</small></td>
+                    <td><b>ኅ</b> <small>(h2)</small></td>
+                    <td><b>ኆ</b> <small>(h2o)</small></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ነ</b> <small>(ne)</small></td>
+                    <td><b>ኑ</b> <small>(nu)</small></td>
+                    <td><b>ኒ</b> <small>(ni)</small></td>
+                    <td><b>ና</b> <small>(na)</small></td>
+                    <td><b>ኔ</b> <small>(nie)</small></td>
+                    <td><b>ን</b> <small>(n)</small></td>
+                    <td><b>ኖ</b> <small>(no)</small></td>
+                    <td><b>ኗ</b> <small>(nua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ኘ</b> <small>(Ne)</small></td>
+                    <td><b>ኙ</b> <small>(Nu)</small></td>
+                    <td><b>ኚ</b> <small>(Ni)</small></td>
+                    <td><b>ኛ</b> <small>(Na)</small></td>
+                    <td><b>ኜ</b> <small>(Nie)</small></td>
+                    <td><b>ኝ</b> <small>(N)</small></td>
+                    <td><b>ኞ</b> <small>(No)</small></td>
+                    <td><b>ኟ</b> <small>(Nua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>አ</b> <small>(e)</small></td>
+                    <td><b>ኡ</b> <small>(u)</small></td>
+                    <td><b>ኢ</b> <small>(i)</small></td>
+                    <td><b>ኣ</b> <small>(a)</small></td>
+                    <td><b>ኤ</b> <small>(ie)</small></td>
+                    <td><b>እ</b> <small>(ee)</small></td>
+                    <td><b>ኦ</b> <small>(o)</small></td>
+                    <td><b>ኧ</b> <small>(ua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ከ</b> <small>(ke)</small></td>
+                    <td><b>ኩ</b> <small>(ku)</small></td>
+                    <td><b>ኪ</b> <small>(ki)</small></td>
+                    <td><b>ካ</b> <small>(ka)</small></td>
+                    <td><b>ኬ</b> <small>(kie)</small></td>
+                    <td><b>ክ</b> <small>(k)</small></td>
+                    <td><b>ኮ</b> <small>(ko)</small></td>
+                    <td><b>ኳ</b> <small>(kua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ኸ</b> <small>(Ke)</small></td>
+                    <td><b>ኹ</b> <small>(Ku)</small></td>
+                    <td><b>ኺ</b> <small>(Ki)</small></td>
+                    <td><b>ኻ</b> <small>(Ka)</small></td>
+                    <td><b>ኼ</b> <small>(Kie)</small></td>
+                    <td><b>ኽ</b> <small>(K)</small></td>
+                    <td><b>ኾ</b> <small>(Ko)</small></td>
+                    <td><b>ዃ</b> <small>(Kua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ወ</b> <small>(we)</small></td>
+                    <td><b>ዉ</b> <small>(wu)</small></td>
+                    <td><b>ዊ</b> <small>(wi)</small></td>
+                    <td><b>ዋ</b> <small>(wa)</small></td>
+                    <td><b>ዌ</b> <small>(wie)</small></td>
+                    <td><b>ው</b> <small>(w)</small></td>
+                    <td><b>ዎ</b> <small>(wo)</small></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ዐ</b> <small>(E)</small></td>
+                    <td><b>ዑ</b> <small>(U)</small></td>
+                    <td><b>ዒ</b> <small>(I)</small></td>
+                    <td><b>ዓ</b> <small>(A)</small></td>
+                    <td><b>ዔ</b> <small>(IE)</small></td>
+                    <td><b>ዕ</b> <small>(Ee)</small></td>
+                    <td><b>ዖ</b> <small>(O)</small></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ዘ</b> <small>(ze)</small></td>
+                    <td><b>ዙ</b> <small>(zu)</small></td>
+                    <td><b>ዚ</b> <small>(zi)</small></td>
+                    <td><b>ዛ</b> <small>(za)</small></td>
+                    <td><b>ዜ</b> <small>(zie)</small></td>
+                    <td><b>ዝ</b> <small>(z)</small></td>
+                    <td><b>ዞ</b> <small>(zo)</small></td>
+                    <td><b>ዟ</b> <small>(zua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ዠ</b> <small>(Ze)</small></td>
+                    <td><b>ዡ</b> <small>(Zu)</small></td>
+                    <td><b>ዢ</b> <small>(Zi)</small></td>
+                    <td><b>ዣ</b> <small>(Za)</small></td>
+                    <td><b>ዤ</b> <small>(Zie)</small></td>
+                    <td><b>ዥ</b> <small>(Z)</small></td>
+                    <td><b>ዦ</b> <small>(Zo)</small></td>
+                    <td><b>ዧ</b> <small>(Zua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>የ</b> <small>(ye)</small></td>
+                    <td><b>ዩ</b> <small>(yu)</small></td>
+                    <td><b>ዪ</b> <small>(yi)</small></td>
+                    <td><b>ያ</b> <small>(ya)</small></td>
+                    <td><b>ዬ</b> <small>(yie)</small></td>
+                    <td><b>ይ</b> <small>(y)</small></td>
+                    <td><b>ዮ</b> <small>(yo)</small></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ደ</b> <small>(de)</small></td>
+                    <td><b>ዱ</b> <small>(du)</small></td>
+                    <td><b>ዲ</b> <small>(di)</small></td>
+                    <td><b>ዳ</b> <small>(da)</small></td>
+                    <td><b>ዴ</b> <small>(die)</small></td>
+                    <td><b>ድ</b> <small>(d)</small></td>
+                    <td><b>ዶ</b> <small>(do)</small></td>
+                    <td><b>ዷ</b> <small>(dua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ጀ</b> <small>(je)</small></td>
+                    <td><b>ጁ</b> <small>(ju)</small></td>
+                    <td><b>ጂ</b> <small>(ji)</small></td>
+                    <td><b>ጃ</b> <small>(ja)</small></td>
+                    <td><b>ጄ</b> <small>(jie)</small></td>
+                    <td><b>ጅ</b> <small>(j)</small></td>
+                    <td><b>ጆ</b> <small>(jo)</small></td>
+                    <td><b>ጇ</b> <small>(jua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ገ</b> <small>(ge)</small></td>
+                    <td><b>ጉ</b> <small>(gu)</small></td>
+                    <td><b>ጊ</b> <small>(gi)</small></td>
+                    <td><b>ጋ</b> <small>(ga)</small></td>
+                    <td><b>ጌ</b> <small>(gie)</small></td>
+                    <td><b>ግ</b> <small>(g)</small></td>
+                    <td><b>ጎ</b> <small>(go)</small></td>
+                    <td><b>ጓ</b> <small>(gua)</small></td>
+                    <td><b>ጐ</b> <small>(gue)</small></td>
+                    <td><b>ጒ</b> <small>(gui)</small></td>
+                  </tr>
+                  <tr>
+                    <td><b>ጠ</b> <small>(Te)</small></td>
+                    <td><b>ጡ</b> <small>(Tu)</small></td>
+                    <td><b>ጢ</b> <small>(Ti)</small></td>
+                    <td><b>ጣ</b> <small>(Ta)</small></td>
+                    <td><b>ጤ</b> <small>(Tie)</small></td>
+                    <td><b>ጥ</b> <small>(T)</small></td>
+                    <td><b>ጦ</b> <small>(To)</small></td>
+                    <td><b>ጧ</b> <small>(Tua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ጨ</b> <small>(Ce)</small></td>
+                    <td><b>ጩ</b> <small>(Cu)</small></td>
+                    <td><b>ጪ</b> <small>(Ci)</small></td>
+                    <td><b>ጫ</b> <small>(Ca)</small></td>
+                    <td><b>ጬ</b> <small>(Cie)</small></td>
+                    <td><b>ጭ</b> <small>(C)</small></td>
+                    <td><b>ጮ</b> <small>(Co)</small></td>
+                    <td><b>ጯ</b> <small>(Cua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ጰ</b> <small>(Pe)</small></td>
+                    <td><b>ጱ</b> <small>(Pu)</small></td>
+                    <td><b>ጲ</b> <small>(Pi)</small></td>
+                    <td><b>ጳ</b> <small>(Pa)</small></td>
+                    <td><b>ጴ</b> <small>(Pie)</small></td>
+                    <td><b>ጵ</b> <small>(P)</small></td>
+                    <td><b>ጶ</b> <small>(Po)</small></td>
+                    <td><b>ጷ</b> <small>(Pua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ፀ</b> <small>(xe)</small></td>
+                    <td><b>ፁ</b> <small>(xu)</small></td>
+                    <td><b>ፂ</b> <small>(xi)</small></td>
+                    <td><b>ፃ</b> <small>(xa)</small></td>
+                    <td><b>ፄ</b> <small>(xie)</small></td>
+                    <td><b>ፅ</b> <small>(x)</small></td>
+                    <td><b>ፆ</b> <small>(xo)</small></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ጸ</b> <small>(Xe)</small></td>
+                    <td><b>ጹ</b> <small>(Xu)</small></td>
+                    <td><b>ጺ</b> <small>(Xi)</small></td>
+                    <td><b>ጻ</b> <small>(Xa)</small></td>
+                    <td><b>ጼ</b> <small>(Xie)</small></td>
+                    <td><b>ጽ</b> <small>(X)</small></td>
+                    <td><b>ጾ</b> <small>(Xo)</small></td>
+                    <td><b>ጿ</b> <small>(Xua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ፈ</b> <small>(fe)</small></td>
+                    <td><b>ፉ</b> <small>(fu)</small></td>
+                    <td><b>ፊ</b> <small>(fi)</small></td>
+                    <td><b>ፋ</b> <small>(fa)</small></td>
+                    <td><b>ፌ</b> <small>(fie)</small></td>
+                    <td><b>ፍ</b> <small>(f)</small></td>
+                    <td><b>ፎ</b> <small>(fo)</small></td>
+                    <td><b>ፏ</b> <small>(fua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ፐ</b> <small>(pe)</small></td>
+                    <td><b>ፑ</b> <small>(pu)</small></td>
+                    <td><b>ፒ</b> <small>(pi)</small></td>
+                    <td><b>ፓ</b> <small>(pa)</small></td>
+                    <td><b>ፔ</b> <small>(pie)</small></td>
+                    <td><b>ፕ</b> <small>(p)</small></td>
+                    <td><b>ፖ</b> <small>(po)</small></td>
+                    <td><b>ፗ</b> <small>(pua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>ቨ</b> <small>(ve)</small></td>
+                    <td><b>ቩ</b> <small>(vu)</small></td>
+                    <td><b>ቪ</b> <small>(vi)</small></td>
+                    <td><b>ቫ</b> <small>(va)</small></td>
+                    <td><b>ቬ</b> <small>(vie)</small></td>
+                    <td><b>ቭ</b> <small>(v)</small></td>
+                    <td><b>ቮ</b> <small>(vo)</small></td>
+                    <td><b>ቯ</b> <small>(vua)</small></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="card border border-secondary shadow-sm mb-0 mt-4 bg-white text-dark">
+              <div class="card-header bg-light py-2 px-4 text-dark">
+                <h5 class="mb-0 fw-bold">Punctuation</h5>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped table-sm text-center align-middle mb-0">
+                  <tbody>
+                    <tr>
+                      <td><b>።</b> <small>(.)</small></td>
+                      <td><b>፣</b> <small>(,)</small></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/elements.js"></script>
   <script type="text/javascript" src="assets/js/data.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#table-search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#mapping-table-body tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
 </html>

@@ -1,13 +1,9 @@
 .main {
   width: 300px;
-  position: fixed;
   height: 500px;
+  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
   background-color: #292F33;
   font-family: "Trebuchet MS";
 }
