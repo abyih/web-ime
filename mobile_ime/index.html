@@ -24,22 +24,17 @@
       </div>
       
       <div class="row">
-        <!-- Phone Simulator Column -->
         <div class="col-lg-5 col-xl-4 d-flex justify-content-center mb-5">
           <div id="main" class="main border border-secondary rounded shadow-sm">
             <div class="keyboard"></div>
           </div>
         </div>
 
-        <!-- Letter Mapping Guide Column -->
         <div class="col-lg-7 col-xl-8">
           <div class="card shadow-sm p-4 mb-4 bg-white text-dark">
             <h4 class="mb-3 fw-bold">Letter Mapping Guide</h4>
-            <div class="mb-3">
-              <input type="text" id="table-search" class="form-control border-secondary text-dark bg-white" placeholder="Search phonetic mappings or characters (e.g. he, hua, ሀ, ሏ)..." autocomplete="off">
-            </div>
-            
-            <div class="table-responsive" style="max-height: 480px; overflow-y: auto;">
+
+            <div>
               <table class="table table-bordered table-striped table-hover table-sm text-center align-middle mb-0">
                 <thead>
                   <tr class="table-light text-dark">
@@ -504,14 +499,5 @@
   <script type="text/javascript" src="assets/js/elements.js"></script>
   <script type="text/javascript" src="assets/js/data.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#table-search").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#mapping-table-body tr").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-      });
-    });
-  </script>
+
 </html>
