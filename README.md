@@ -25,9 +25,8 @@ A desktop-oriented tool that captures standard QWERTY keyboard input and maps it
 
 ## Features
 
-- **Phonetic Mapping**: Uses a logical mapping system to convert Latin characters to Geez script.
-- **Multi-language Support**: Configured for Tigrinya and English.
-- **Responsive Design**: Built with Bootstrap for a clean UI.
+- **Letter Mapping**: Uses a logical mapping system to convert Latin characters to Geez script.
+- **Multi-language Support**: Configured for Tigrinya (All languages which use the Geez Script) and English.
 
 ## How to Use
 
@@ -36,7 +35,3 @@ A desktop-oriented tool that captures standard QWERTY keyboard input and maps it
    git clone https://github.com/your-username/web-ime.git
    ```
 2. Open `index.html` in the root directory to access the main portal, or navigate directly to either project folder.
-
-## License
-
-MIT
