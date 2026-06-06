@@ -1,6 +1,6 @@
 # Geez Web IME
 
-A web-based Input Method Editor (IME) for Geez scripts. Live demo: [abyih.github.io/web-ime/](https://abyih.github.io/web-ime/)
+A web-based Input Method Editor (IME) for Geez scripts. Live demo: [ime.yehalab.com](https://ime.yehalab.com)
 
 - **Mobile**: Designed for touch interaction and virtual keyboard display.
 - **Desktop**: Designed for physical keyboard input using phonetic mapping.
